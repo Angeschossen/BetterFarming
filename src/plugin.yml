@@ -1,0 +1,13 @@
+main: me.angeschossen.betterfarming.BetterFarming
+name: BetterFarming
+version: 1.0
+api-version: 1.13
+
+permissions:
+  betterfarming.*:
+    description: Access to all Betterfarming actions
+    default: op
+    children:
+      betterfarming.farms.<Number>:
+        description: Give players permission to create specific amount of farms.
+        default: op

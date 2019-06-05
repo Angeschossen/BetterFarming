@@ -1,0 +1,66 @@
+# General settings
+general:
+  # Language
+  # Pre translated:
+  # English: en-US
+  language: 'en-US'
+  # Worlds were players can create farms.
+  worlds_list:
+    - world
+
+# Database settings
+database:
+  # MySQL
+  mysql:
+    ip-address: 'localhost'
+    port: '3306'
+    database: 'betterfarming'
+    user: 'minecraft'
+    password: 'password'
+
+# Economy settings
+economy:
+  # Here you can choose which type
+  # of economy you want to use.
+  # Highest priority is at the top.
+  # If nothing could be enabled,
+  # the plugin, will use item based economy.
+  type:
+    # Enable vault economy?
+    vault: true
+    # Set the currency item for
+    # default item based economy.
+    default: 'DIAMOND'
+
+
+level:
+  growth_interval:
+    1:
+      value: 120
+    2:
+      value_2: 110
+      cost: 1000.0
+    3:
+      value_3: 100
+      cost_2: 2000.0
+    4:
+      value_4: 90
+      cost_3: 3000.0
+    5:
+      value_5: 80
+      cost_4: 4000.0
+    6:
+      value_6: 70
+      cost_5:
+  radius:
+    1:
+      value_3: 1
+    2:
+      value_4: 2
+      cost_2: 100.0
+  storage_slots:
+    1:
+      value_5: 9
+    2:
+      value_6: 18
+      cost_3: 100.0
