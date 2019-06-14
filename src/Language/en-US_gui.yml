@@ -74,11 +74,11 @@ gui:
       close:
         name: '&cClose'
         lore:
-        - '&7Close this menu.'
-        - ' '
-        - '&8- &7You can open it again'
-        - '  &7by rightclicking on'
-        - '  &7the farm item.'
+          - '&7Close this menu.'
+          - ' '
+          - '&8- &7You can open it again'
+          - '  &7by rightclicking on'
+          - '  &7the farm item.'
         material: 'RED_STAINED_GLASS_PANE'
         slot: 9
     f:
@@ -87,25 +87,25 @@ gui:
         lore:
           - '&7Upgrade the radius.'
           - ' '
-          - '&7Next ->'
-          - '&7Value:&b {radius_next}'
-          - '&7Level:&b {next_level}'
-          - '&7Cost:&c {cost} $'
+          - '&7Next Level:'
+          - '&7Radius:&a {radius_next}'
+          - '&7Level:&a {next_level}'
+          - '&7Cost:&c ${cost}'
           - ' '
-          - '&7Current value:&b {radius_current}'
-        material: 'PORTAL_FRAME'
-        slot: 12
+          - '&7Current radius:&2 {radius_current}'
+        material: 'FARMLAND'
+        slot: 11
       upgrade_growth_interval:
         name: '&7> &eUpgrade Speed'
         lore:
           - '&7Upgrade the growth interval.'
           - ' '
-          - '&7Next ->'
-          - '&7Value:&b {interval_next}'
-          - '&7Level:&b {next_level}'
-          - '&7Cost:&c {cost} $'
+          - '&7Next Level:'
+          - '&7Interval:&a {interval_next} second(s)'
+          - '&7Level:&a {next_level}'
+          - '&7Cost:&c ${cost}'
           - ' '
-          - '&7Current value:&b {interval_current}'
+          - '&7Current interval:&2 {interval_current} second(s)'
         material: 'CLOCK'
         slot: 14
       upgrade_storage_slots:
@@ -113,14 +113,14 @@ gui:
         lore:
           - '&7Upgrade the storage slots.'
           - ' '
-          - '&7Next ->'
-          - '&7Value:&b {storage_next}'
-          - '&7Level:&b {next_level}'
-          - '&7Cost:&c {cost} $'
+          - '&7Next Level:'
+          - '&7Slots:&a {storage_next}'
+          - '&7Level:&a {next_level}'
+          - '&7Cost:&c ${cost}'
           - ' '
-          - '&7Current value:&b {storage_current}'
+          - '&7Current capacity:&2 {storage_current}'
         material: 'CHEST'
-        slot: 16
+        slot: 17
     a:
       failure_max:
         name: '&4Max Level reached'
@@ -332,22 +332,24 @@ gui:
         slot: 14
     l:
       yes_farm-delete:
-        name: '&aYes'
+        name: '&aYES'
         lore:
-          - '&7Delete this farm?'
+          - '&7Do you want to delete'
+          - '&7this farm?'
           - ' '
-          - '&7Click here to delete'
-          - '&7this farm.'
+          - '- &7Click here to delete'
+          - '  &7this farm.'
         material: 'LIME_STAINED_GLASS_PANE'
         from: 10
         to: 13
       no_farm-delete:
-        name: '&cNo'
+        name: '&cNO'
         lore:
-          - '&7Delete this farm?'
+          - '&7Do you want to delete'
+          - '&7this farm?'
           - ' '
-          - '&7Click here to abort'
-          - '&7this action.'
+          - '- &7Click here to abort'
+          - '  &7this action.'
         material: 'RED_STAINED_GLASS_PANE'
         from: 15
         to: 18

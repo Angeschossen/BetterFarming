@@ -31,36 +31,3 @@ economy:
     # Set the currency item for
     # default item based economy.
     default: 'DIAMOND'
-
-
-level:
-  growth_interval:
-    1:
-      value: 120
-    2:
-      value_2: 110
-      cost: 1000.0
-    3:
-      value_3: 100
-      cost_2: 2000.0
-    4:
-      value_4: 90
-      cost_3: 3000.0
-    5:
-      value_5: 80
-      cost_4: 4000.0
-    6:
-      value_6: 70
-      cost_5:
-  radius:
-    1:
-      value_3: 1
-    2:
-      value_4: 2
-      cost_2: 100.0
-  storage_slots:
-    1:
-      value_5: 9
-    2:
-      value_6: 18
-      cost_3: 100.0
