@@ -12,6 +12,11 @@ general:
 database:
   # MySQL
   mysql:
+    # Enable this to use MySQL instead of "file based"
+    # SQLite. For performance improvement it's recommended to
+    # use MySQL. If you don't have access to a MySQL server,
+    # just let this disabled (false).
+    enabled: false
     ip-address: 'localhost'
     port: '3306'
     database: 'betterfarming'
@@ -31,3 +36,8 @@ economy:
     # Set the currency item for
     # default item based economy.
     default: 'DIAMOND'
+
+farm:
+  protection:
+    y-plus: 4
+    y-minus: 4

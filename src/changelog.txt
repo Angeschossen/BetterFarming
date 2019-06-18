@@ -1,2 +1,5 @@
-[#] Fixed farm growth interval upgrade not
-working flawless
+# IMPROVED First time usage information messages
+# ADDED Connection failed info messages
+# FIXED Error at Craft event
+# FIXED Error at Inventory Click
+# FIXED Error at player quit

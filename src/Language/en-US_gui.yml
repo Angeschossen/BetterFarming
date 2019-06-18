@@ -163,11 +163,12 @@ gui:
         slot: 9
     l:
       item:
-        name: ''
+        name: 'Item'
         lore:
-          - ''
+          - 'You can ignore this item configuration.'
+        material: 'STONE'
         from: 10
-        to: 18
+        to: 45
     a:
       failure_inv_full:
         name: '&4Inventory is full'
@@ -202,11 +203,12 @@ gui:
         slot: 9
     l:
       item:
-        name: ''
+        name: 'Item'
         lore:
-          - ''
+          - 'You can ignore this item configuration.'
+        material: 'STONE'
         from: 10
-        to: 27
+        to: 45
     a:
       failure_inv_full:
         name: '&4Inventory is full'
@@ -241,11 +243,12 @@ gui:
         slot: 9
     l:
       item:
-        name: ''
+        name: 'Item'
         lore:
-          - ''
+          - 'You can ignore this item configuration.'
+        material: 'STONE'
         from: 10
-        to: 36
+        to: 45
     a:
       failure_inv_full:
         name: '&4Inventory is full'
@@ -297,9 +300,10 @@ gui:
         slot: 52
     l:
       item:
-        name: ''
+        name: 'Item'
         lore:
-          - ''
+          - 'You can ignore this item configuration.'
+        material: 'STONE'
         from: 10
         to: 45
     a:
