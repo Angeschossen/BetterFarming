@@ -38,6 +38,13 @@ economy:
     default: 'DIAMOND'
 
 farm:
+  # Protection settings
   protection:
+    # Y-plus means the y value
+    # (height where the farm is) plus this value.
+    # This create a protection box for the farm.
     y-plus: 4
+    # Some for minus, just
+    # that it goes for example 4 blocks
+    # down, instead of up.
     y-minus: 4

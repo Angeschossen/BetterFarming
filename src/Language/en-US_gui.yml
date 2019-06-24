@@ -122,6 +122,14 @@ gui:
         material: 'CHEST'
         slot: 17
     a:
+      failure_radius:
+        name: '&4Upgrade Failed: &cFarm Overlap'
+        lore:
+          - '&7Couldn''t upgrade farm radius'
+          - '&7because it would overlap with'
+          - '&7a other farm.'
+        material: 'FARMLAND'
+        slot: 11
       failure_max:
         name: '&4Max Level reached'
         lore:
@@ -168,7 +176,7 @@ gui:
           - 'You can ignore this item configuration.'
         material: 'STONE'
         from: 10
-        to: 45
+        to: 18
     a:
       failure_inv_full:
         name: '&4Inventory is full'
@@ -208,7 +216,7 @@ gui:
           - 'You can ignore this item configuration.'
         material: 'STONE'
         from: 10
-        to: 45
+        to: 27
     a:
       failure_inv_full:
         name: '&4Inventory is full'
@@ -248,7 +256,7 @@ gui:
           - 'You can ignore this item configuration.'
         material: 'STONE'
         from: 10
-        to: 45
+        to: 36
     a:
       failure_inv_full:
         name: '&4Inventory is full'

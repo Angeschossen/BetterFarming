@@ -1,0 +1,23 @@
+# You can set messages under "message:" to
+# display as title or actionbar. Or just
+# as chat message.
+# Use #t# in front of the message to display it as a title.
+# With {newline} you go in a new line.
+# Use #a# in front of the message to display it as a actionbar message.
+#
+# You can get help here:
+
+general:
+  farm:
+    crop: '&aCrop'
+    animal: '&9Animal'
+
+message:
+  no-access:
+    max-farms: '&8[&aBetterFarming&8] &cYou''re not allowed to create any more farms. &7You reached your maximum amount of&b {max} &7farms. Permission: betterfarming.farms.NUMBER'
+    other-farm: '&8[&aBetterFarming&8] &cYou can''t do this here since it overlaps with a other farm. &7Get some distance.'
+    block-break: '&8[&aBetterFarming&8] &cYou''re not allowed to break blocks in this farm. &7It belongs to&b {owner}&7.'
+    block-place: '&8[&aBetterFarming&8] &cYou''re not allowed to plave blocks in this farm. &7It belongs to&b {owner}&7.'
+    spam: '&8[&aBetterFarming&8] &cPlease don''t spam farm creation. &7Farm creation aborted.'
+  farm-created: '#t#&2Created{newline}&a{type} Farm'
+  farm-deleted: '#t#&cDeleted{newline}&a{type} Farm'

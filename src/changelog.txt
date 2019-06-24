@@ -1,5 +1,4 @@
-# IMPROVED First time usage information messages
-# ADDED Connection failed info messages
-# FIXED Error at Craft event
-# FIXED Error at Inventory Click
-# FIXED Error at player quit
+# FIXED Dispeners can destroy farm items
+# FIXED Farm creation ignored y value of other farm
+# FIXED Default GUI language file had mistakes in placeholders
+You can just delete your current GUI file or just adjust your current one.
