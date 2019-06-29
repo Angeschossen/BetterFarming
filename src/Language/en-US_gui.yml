@@ -58,11 +58,11 @@ general:
 
 misc:
   farm-item:
-    name: '&bFarm item'
+    name: '&aCrop Farm Creator'
     lore:
       - '&7With this item you'
-      - '&7can create crop'
-      - '&7farms by placing it'
+      - '&7can create a crop'
+      - '&7farm by placing it'
       - '&7on the ground.'
     material: 'END_ROD'
 
@@ -101,11 +101,11 @@ gui:
           - '&7Upgrade the growth interval.'
           - ' '
           - '&7Next Level:'
-          - '&7Interval:&a {interval_next} second(s)'
+          - '&7Interval:&a {interval_next}'
           - '&7Level:&a {next_level}'
           - '&7Cost:&c ${cost}'
           - ' '
-          - '&7Current interval:&2 {interval_current} second(s)'
+          - '&7Current interval:&2 {interval_current}'
         material: 'CLOCK'
         slot: 14
       upgrade_storage_slots:

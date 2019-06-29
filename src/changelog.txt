@@ -1,4 +1,7 @@
-# FIXED Dispeners can destroy farm items
-# FIXED Farm creation ignored y value of other farm
-# FIXED Default GUI language file had mistakes in placeholders
-You can just delete your current GUI file or just adjust your current one.
++ ADDED Command /Farm give <Player> [amount]
+This command allows you to give farm items
+to other players. It can also be executed from console.
+
++ ADDED Option to let /Farm get cost the player x amount of $
+Setting: farm.item.cost
+You can set this to 0, if you want to disable this.

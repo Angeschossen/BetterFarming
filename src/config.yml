@@ -37,7 +37,29 @@ economy:
     # default item based economy.
     default: 'DIAMOND'
 
+integration:
+  # Plugin: Lands
+  # https://www.spigotmc.org/resources/53313
+  # Allow players, which are trusted in the land where the
+  # farm is located in, to break blocks, place blocks and
+  # interact, if they're allowed to do so in the land?
+  lands: true
+
+command:
+  # Set aliases
+  # for /BetterFarming command
+  # NOTE: This settings
+  # requires /reload
+  aliases_list:
+    - farm
+
 farm:
+  # Item to create farm
+  item:
+    # Cost of the item,
+    # if you're taking it from
+    # /Farm get
+    cost: 1500.0
   # Protection settings
   protection:
     # Y-plus means the y value
@@ -48,3 +70,4 @@ farm:
     # that it goes for example 4 blocks
     # down, instead of up.
     y-minus: 4
+
