@@ -1,6 +1,6 @@
 main: me.angeschossen.betterfarming.BetterFarming
 name: BetterFarming
-version: 1.4.0
+version: 1.5.3
 api-version: 1.13
 
 commands:

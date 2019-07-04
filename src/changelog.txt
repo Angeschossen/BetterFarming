@@ -1,7 +1,1 @@
-+ ADDED Command /Farm give <Player> [amount]
-This command allows you to give farm items
-to other players. It can also be executed from console.
-
-+ ADDED Option to let /Farm get cost the player x amount of $
-Setting: farm.item.cost
-You can set this to 0, if you want to disable this.
+# FIXED Chunk load error on startup

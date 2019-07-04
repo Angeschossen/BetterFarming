@@ -44,6 +44,11 @@ integration:
   # farm is located in, to break blocks, place blocks and
   # interact, if they're allowed to do so in the land?
   lands: true
+  # Plugin: Towny
+  # Allow players, which are trusted in the town where the
+  # farm is located in, to break blocks, place blocks and
+  # interact, if they're allowed to do so in the town?
+  towny: true
 
 command:
   # Set aliases

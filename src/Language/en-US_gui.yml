@@ -165,7 +165,7 @@ gui:
           - '&7Close this menu.'
           - ' '
           - '&8- &7You can open it again'
-          - '  &7by leftclicking on'
+          - '  &7by using right click on'
           - '  &7the farm item.'
         material: 'RED_STAINED_GLASS_PANE'
         slot: 9
@@ -205,7 +205,7 @@ gui:
           - '&7Close this menu.'
           - ' '
           - '&8- &7You can open it again'
-          - '  &7by leftclicking on'
+          - '  &7by using right click on'
           - '  &7the farm item.'
         material: 'RED_STAINED_GLASS_PANE'
         slot: 9
@@ -245,7 +245,7 @@ gui:
           - '&7Close this menu.'
           - ' '
           - '&8- &7You can open it again'
-          - '  &7by leftclicking on'
+          - '  &7by using right click on'
           - '  &7the farm item.'
         material: 'RED_STAINED_GLASS_PANE'
         slot: 9
@@ -285,7 +285,7 @@ gui:
           - '&7Close this menu.'
           - ' '
           - '&8- &7You can open it again'
-          - '  &7by leftclicking on'
+          - '  &7by using right click on'
           - '  &7the farm item.'
         material: 'RED_STAINED_GLASS_PANE'
         slot: 9
