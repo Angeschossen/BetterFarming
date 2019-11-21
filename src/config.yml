@@ -1,4 +1,4 @@
-# General settings
+# General player
 general:
   # Language
   # Pre translated:
@@ -10,7 +10,7 @@ general:
   worlds_list:
     - world
 
-# Database settings
+# Database player
 database:
   # MySQL
   mysql:
@@ -25,7 +25,7 @@ database:
     user: 'minecraft'
     password: 'password'
 
-# Economy settings
+# Economy player
 economy:
   # Here you can choose which type
   # of economy you want to use.
@@ -63,7 +63,7 @@ command:
   get-confirm: true
   # Set aliases
   # for /BetterFarming command
-  # NOTE: This settings
+  # NOTE: This player
   # requires /reload
   aliases_list:
     - farm
@@ -77,7 +77,7 @@ farm:
     # if you're taking it from
     # /Farm get
     cost: 1500.0
-  # Creation settings
+  # Creation player
   creation:
     # Should only the owner
     # registered on the farm
@@ -86,7 +86,7 @@ farm:
     # If enabled, BetterFarming
     # will set farmland around the farm.
     farm-land: true
-  # Protection settings
+  # Protection player
   protection:
     # Y-plus means the y value
     # (height where the farm is) plus this value.
@@ -97,7 +97,7 @@ farm:
     # down, instead of up.
     y-minus: 4
 
-  # DEFAULT role settings
+  # DEFAULT player player
   # They will only apply for new farms.
   role:
     gardener:
@@ -116,7 +116,7 @@ crop:
     # Enable growth and harvesting of this crop?
     enabled_2: true
     # Chances (% - Percent)
-    # You can play with this settings
+    # You can play with this player
     # to make the growth and harvesting
     # of crops more rare or often.
     chance:

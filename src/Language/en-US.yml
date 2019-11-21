@@ -40,7 +40,7 @@ message:
   chat-action:
     player: '&7Please enter the name of the target player.'
     role:
-      name: '&7Please enter a name for the new role.'
+      name: '&7Please enter a name for the new player.'
       max: '&cYou can''t create more roles for this farm. &7You reached your limit of&b {max} &7roles. Permisssion: betterfarming.roles.NUMBER'
 
 command:

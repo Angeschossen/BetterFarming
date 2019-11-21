@@ -122,7 +122,7 @@ gui:
       settings:
         name: '&eSettings'
         lore:
-          - '&7Edit settings or'
+          - '&7Edit player or'
           - '&7view some'
           - '&7information.'
         material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTRkNDliYWU5NWM3OTBjM2IxZmY1YjJmMDEwNTJhNzE0ZDYxODU0ODFkNWIxYzg1OTMwYjNmOTlkMjMyMTY3NCJ9fX0='
@@ -435,9 +435,9 @@ gui:
     size: 27
     l:
       object:
-        name: '{role}'
+        name: '{player}'
         lore:
-          - '&7Click here to edit this role.'
+          - '&7Click here to edit this player.'
         material: 'PLAYER_HEAD'
         from: 10
         to: 18
@@ -470,8 +470,8 @@ gui:
         name: '&7> &aCreate Role'
         lore:
           - '&7Click here to create a'
-          - '&7new role. You''ll be guided'
-          - '&7through the role setup.'
+          - '&7new player. You''ll be guided'
+          - '&7through the player setup.'
         material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19'
         slot: 23
     p:
@@ -485,7 +485,7 @@ gui:
         to: 27
 
   role:
-    title: '&8Role {role}'
+    title: '&8Role {player}'
     size: 27
     f:
       back:
@@ -499,20 +499,20 @@ gui:
         name: '&7> &eIcon'
         lore:
           - '&7Click here to change'
-          - '&7this role icon.'
+          - '&7this player icon.'
         material: 'STONE'
         slot: 16
     s:
       members:
         name: '&7> &eRole Members'
         lore:
-          - '&7View all role members.'
+          - '&7View all player members.'
         material: 'PLAYER_HEAD'
         slot: 12
       settings:
         name: '&7> &eSettings'
         lore:
-          - '&7Edit role settings.'
+          - '&7Edit player player.'
         material: 'COMMAND_BLOCK'
         slot: 14
     a:
@@ -612,7 +612,7 @@ gui:
       harvest:
         name: '&6Harvest'
         lore:
-          - '&7Allow this role to'
+          - '&7Allow this player to'
           - '&7harvest crops in this farm?'
           - ' '
           - '&7Status: {status}'
@@ -626,7 +626,7 @@ gui:
       plant:
         name: '&6Plant'
         lore:
-          - '&7Allow this role to'
+          - '&7Allow this player to'
           - '&7plant crops in this farm?'
           - ' '
           - '&7Status: {status}'
@@ -640,7 +640,7 @@ gui:
       block_break:
         name: '&6Break Blocks'
         lore:
-          - '&7Allow this role to'
+          - '&7Allow this player to'
           - '&7break blocks in this farm?'
           - ' '
           - '&7Status: {status}'
@@ -654,7 +654,7 @@ gui:
       block_place:
         name: '&6Place Blocks'
         lore:
-          - '&7Allow this role to'
+          - '&7Allow this player to'
           - '&7place blocks in this farm?'
           - ' '
           - '&7Status: {status}'
@@ -668,7 +668,7 @@ gui:
       interact:
         name: '&6Interact'
         lore:
-          - '&7Allow this role to'
+          - '&7Allow this player to'
           - '&7interact in this farm?'
           - ' '
           - '&7Status: {status}'
@@ -720,7 +720,7 @@ gui:
       object:
         name: '&e{player}'
         lore:
-          - '&7Role: {role}'
+          - '&7Role: {player}'
           - ' '
           - '&bLEFT CLICK'
           - '&7▲ Promote'

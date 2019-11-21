@@ -5,5 +5,5 @@ public enum FarmRole {
     VISITOR,
     MEMBER,
     ADMIN,
-    OWNER;
+    OWNER
 }
