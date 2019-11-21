@@ -5,6 +5,8 @@ general:
   # English: en-US
   language: 'en-US'
   # Worlds were players can create farms.
+  # NOTE: This setting requires server reload.
+  # World names are CASE-SENSITIVE
   worlds_list:
     - world
 
@@ -33,6 +35,12 @@ economy:
   type:
     # Enable vault economy?
     vault: true
+    # Let your players pay with
+    # exp LEVELS?
+    exp-levels: false
+    # Default economy
+    # Will be used if vault and exp is disabled
+    # or no vault plugin was found and exp is disabled.
     # Set the currency item for
     # default item based economy.
     default: 'DIAMOND'
@@ -51,12 +59,16 @@ integration:
   towny: true
 
 command:
+  # Should players need to confirm their purchase at /Hoppers get?
+  get-confirm: true
   # Set aliases
   # for /BetterFarming command
   # NOTE: This settings
   # requires /reload
   aliases_list:
     - farm
+    - farms
+    - bf
 
 farm:
   # Item to create farm
@@ -65,6 +77,15 @@ farm:
     # if you're taking it from
     # /Farm get
     cost: 1500.0
+  # Creation settings
+  creation:
+    # Should only the owner
+    # registered on the farm
+    # item, be able to place the farm?
+    only-owner: true
+    # If enabled, BetterFarming
+    # will set farmland around the farm.
+    farm-land: true
   # Protection settings
   protection:
     # Y-plus means the y value
@@ -75,4 +96,67 @@ farm:
     # that it goes for example 4 blocks
     # down, instead of up.
     y-minus: 4
+
+  # DEFAULT role settings
+  # They will only apply for new farms.
+  role:
+    gardener:
+      settings-gardener_list:
+        - HARVEST
+        - PLANT
+        - BLOCK_BREAK
+        - BLOCK_PLACE
+        - INTERACT
+    visitor:
+      settings-visitor_list: []
+
+# Crop Settings
+crop:
+  wheat:
+    # Enable growth and harvesting of this crop?
+    enabled_2: true
+    # Chances (% - Percent)
+    # You can play with this settings
+    # to make the growth and harvesting
+    # of crops more rare or often.
+    chance:
+      # Growth
+      grow_2: 100
+      # Harvesting
+      harvest_2: 100
+  carrots:
+    enabled_3: true
+    chance:
+      grow_3: 100
+      harvest_3: 100
+  potatoes:
+    enabled_4: true
+    chance:
+      grow_4: 100
+      harvest_4: 100
+  beetroots:
+    enabled_5: true
+    chance:
+      grow_5: 75
+      harvest_5: 100
+  melons:
+    enabled_6: true
+    chance:
+      grow_6: 50
+      harvest_6: 75
+  pumpkins:
+    enabled_7: true
+    chance:
+      grow_7: 50
+      harvest_7: 75
+  sweet-berries:
+    enabled_8: true
+    chance:
+      grow_8: 75
+      harvest_8: 50
+  nether-wart:
+    enabled_9: true
+    chance:
+      grow_9: 45
+      harvest_9: 50
 

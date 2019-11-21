@@ -27,8 +27,6 @@ public interface Farm {
 
     void setStorageSlots(int slots);
 
-    boolean canAction(UUID playerUUID, FarmAction farmAction);
-
     void enableAction(FarmRole farmRole, FarmAction farmAction);
 
     void disableAction(FarmRole farmRole, FarmAction farmAction);

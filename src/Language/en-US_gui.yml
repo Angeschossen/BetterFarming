@@ -55,21 +55,36 @@ general:
   disabled: '&cDisabled'
   others: 'Others'
   max: '&cMax reached'
+  role:
+    owner: '&cOwner'
+    gardener: '&aGardener'
+    visitor: '&7Visitor'
 
-misc:
-  farm-item:
+physical-Item:
+  farm_item:
     name: '&aCrop Farm Creator'
     lore:
       - '&7With this item you'
-      - '&7can create a crop'
+      - '&7can create a Crop'
       - '&7farm by placing it'
       - '&7on the ground.'
-    material: 'END_ROD'
+      - ' '
+      - '&8- &7Owner:&2 {owner}'
+      - ' '
+      - '&8- &7Radius:&a {radius} &7blocks'
+      - '  &7Growth:&a {time}'
+      - '  &7Storage:&a {storage} &7slots'
+    material: 'DROPPER'
+
+skull:
+  role:
+    gardener: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ5NTViN2E4MGMxNDUxNjkxODk4ZmE4ODQ3Njc2M2MxMWRkNTIxNTRhNmVjNmU5MTIxNjEwYTkyNmM3YTIifX19'
+    visitor: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0='
 
 gui:
-  upgrade:
-    title: '&8Upgrade Farm'
-    size: 27
+  main:
+    title: '&8Upgrades and Management'
+    size: 45
     s:
       close:
         name: '&cClose'
@@ -81,39 +96,70 @@ gui:
           - '  &7the farm item.'
         material: 'RED_STAINED_GLASS_PANE'
         slot: 9
+      upgrades:
+        name: '&bUpgrades'
+        lore:
+          - '&7Here you can upgrade'
+          - '&7your farm to make it'
+          - '&7even more efficient.'
+        material: 'BEACON'
+        slot: 11
+      management:
+        name: '&eManagement'
+        lore:
+          - '&7Here you can manage'
+          - '&7your farm or just'
+          - '&7view some information.'
+        material: 'COMMAND_BLOCK'
+        slot: 29
+      trusted:
+        name: '&eTrusted Players'
+        lore:
+          - '&7See all trusted players'
+          - '&7for this farm.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0='
+        slot: 31
+      settings:
+        name: '&eSettings'
+        lore:
+          - '&7Edit settings or'
+          - '&7view some'
+          - '&7information.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTRkNDliYWU5NWM3OTBjM2IxZmY1YjJmMDEwNTJhNzE0ZDYxODU0ODFkNWIxYzg1OTMwYjNmOTlkMjMyMTY3NCJ9fX0='
+        slot: 32
     f:
       upgrade_radius:
-        name: '&7> &eUpgrade Radius'
+        name: '&7> &bUpgrade Radius'
         lore:
           - '&7Upgrade the radius.'
           - ' '
-          - '&7Next Level:'
+          - '&7Next Levels:'
           - '&7Radius:&a {radius_next}'
           - '&7Level:&a {next_level}'
           - '&7Cost:&c ${cost}'
           - ' '
           - '&7Current radius:&2 {radius_current}'
         material: 'FARMLAND'
-        slot: 11
+        slot: 13
       upgrade_growth_interval:
-        name: '&7> &eUpgrade Speed'
+        name: '&7> &bUpgrade Speed'
         lore:
           - '&7Upgrade the growth interval.'
           - ' '
-          - '&7Next Level:'
+          - '&7Next Levels:'
           - '&7Interval:&a {interval_next}'
           - '&7Level:&a {next_level}'
           - '&7Cost:&c ${cost}'
           - ' '
           - '&7Current interval:&2 {interval_current}'
         material: 'CLOCK'
-        slot: 14
+        slot: 15
       upgrade_storage_slots:
-        name: '&7> &eUpgrade Storage Capacity'
+        name: '&7> &bUpgrade Storage Capacity'
         lore:
           - '&7Upgrade the storage slots.'
           - ' '
-          - '&7Next Level:'
+          - '&7Next Levels:'
           - '&7Slots:&a {storage_next}'
           - '&7Level:&a {next_level}'
           - '&7Cost:&c ${cost}'
@@ -131,7 +177,7 @@ gui:
         material: 'FARMLAND'
         slot: 11
       failure_max:
-        name: '&4Max Level reached'
+        name: '&4Max Levels reached'
         lore:
           - '&7This farm already reached'
           - '&7the highest level in '
@@ -153,7 +199,15 @@ gui:
       placeholder_1:
         material: 'GRAY_STAINED_GLASS_PANE'
         from: 1
-        to: 27
+        to: 45
+      placeholder_2:
+        material: 'BLACK_STAINED_GLASS_PANE'
+        from: 12
+        to: 12
+      placeholder_3:
+        material: 'BLACK_STAINED_GLASS_PANE'
+        from: 30
+        to: 30
 
   storage_9:
     title: '&8Storage'
@@ -170,7 +224,7 @@ gui:
         material: 'RED_STAINED_GLASS_PANE'
         slot: 9
     l:
-      item:
+      object:
         name: 'Item'
         lore:
           - 'You can ignore this item configuration.'
@@ -210,7 +264,7 @@ gui:
         material: 'RED_STAINED_GLASS_PANE'
         slot: 9
     l:
-      item:
+      object:
         name: 'Item'
         lore:
           - 'You can ignore this item configuration.'
@@ -250,7 +304,7 @@ gui:
         material: 'RED_STAINED_GLASS_PANE'
         slot: 9
     l:
-      item:
+      object:
         name: 'Item'
         lore:
           - 'You can ignore this item configuration.'
@@ -307,7 +361,7 @@ gui:
         material: 'ARROW'
         slot: 52
     l:
-      item:
+      object:
         name: 'Item'
         lore:
           - 'You can ignore this item configuration.'
@@ -331,6 +385,7 @@ gui:
         material: 'GRAY_STAINED_GLASS_PANE'
         from: 45
         to: 54
+
   action-confirm:
     title: '&8Confirm Action'
     size: 27
@@ -374,3 +429,337 @@ gui:
         material: 'GRAY_STAINED_GLASS_PANE'
         from: 19
         to: 27
+
+  roles:
+    title: '&8Roles'
+    size: 27
+    l:
+      object:
+        name: '{role}'
+        lore:
+          - '&7Click here to edit this role.'
+        material: 'PLAYER_HEAD'
+        from: 10
+        to: 18
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 21
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 25
+    s:
+      create:
+        name: '&7> &aCreate Role'
+        lore:
+          - '&7Click here to create a'
+          - '&7new role. You''ll be guided'
+          - '&7through the role setup.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19'
+        slot: 23
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 19
+        to: 27
+
+  role:
+    title: '&8Role {role}'
+    size: 27
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+      icon:
+        name: '&7> &eIcon'
+        lore:
+          - '&7Click here to change'
+          - '&7this role icon.'
+        material: 'STONE'
+        slot: 16
+    s:
+      members:
+        name: '&7> &eRole Members'
+        lore:
+          - '&7View all role members.'
+        material: 'PLAYER_HEAD'
+        slot: 12
+      settings:
+        name: '&7> &eSettings'
+        lore:
+          - '&7Edit role settings.'
+        material: 'COMMAND_BLOCK'
+        slot: 14
+    a:
+      no-item:
+        name: '&cNo Item in Hand'
+        lore:
+          - '&7You need to have a item'
+          - '&7in your main hand.'
+        material: 'STONE'
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 27
+
+
+  role-members:
+    title: '&8Role Members'
+    size: 27
+    l:
+      object:
+        name: '&e{player}'
+        lore:
+          - '&bLEFT CLICK'
+          - '&7Promote this player.'
+          - ' '
+          - '&9RIGHT CLICK'
+          - '&7Demote this player.'
+          - ' '
+          - '[Work in progress]'
+        material: 'PLAYER_HEAD'
+        from: 10
+        to: 18
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 21
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 25
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 19
+        to: 27
+
+
+  role-settings:
+    title: '&8Role Settings'
+    size: 27
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 21
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 25
+    l:
+      harvest:
+        name: '&6Harvest'
+        lore:
+          - '&7Allow this role to'
+          - '&7harvest crops in this farm?'
+          - ' '
+          - '&7Status: {status}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&8Permission: {permission}'
+          - '&8Bypass: {bypass}'
+        material: 'SHEARS'
+        from: 10
+        to: 18
+      plant:
+        name: '&6Plant'
+        lore:
+          - '&7Allow this role to'
+          - '&7plant crops in this farm?'
+          - ' '
+          - '&7Status: {status}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&8Permission: {permission}'
+          - '&8Bypass: {bypass}'
+        material: 'WHEAT_SEEDS'
+        from: 10
+        to: 18
+      block_break:
+        name: '&6Break Blocks'
+        lore:
+          - '&7Allow this role to'
+          - '&7break blocks in this farm?'
+          - ' '
+          - '&7Status: {status}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&8Permission: {permission}'
+          - '&8Bypass: {bypass}'
+        material: 'IRON_PICKAXE'
+        from: 10
+        to: 18
+      block_place:
+        name: '&6Place Blocks'
+        lore:
+          - '&7Allow this role to'
+          - '&7place blocks in this farm?'
+          - ' '
+          - '&7Status: {status}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&8Permission: {permission}'
+          - '&8Bypass: {bypass}'
+        material: 'GRASS'
+        from: 10
+        to: 18
+      interact:
+        name: '&6Interact'
+        lore:
+          - '&7Allow this role to'
+          - '&7interact in this farm?'
+          - ' '
+          - '&7Status: {status}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&8Permission: {permission}'
+          - '&8Bypass: {bypass}'
+        material: 'OAK_FENCE_GATE'
+        from: 10
+        to: 18
+    a:
+      permission:
+        name: '&cNo Permission'
+        lore:
+          - '&7You don''t have the required'
+          - '&7permission for this setting.'
+          - ' '
+          - '&8Permission: {permission}'
+        material: 'STONE'
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 19
+        to: 27
+
+  trusted:
+    title: '&8Trusted Players'
+    size: 36
+    s:
+      trust:
+        name: '&7> &aTrust Player'
+        lore:
+          - '&7Click here to trust'
+          - '&7a player in this farm.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0='
+        slot: 32
+      untrust:
+        name: '&7> &cUntrust Player'
+        lore:
+          - '&7Click here to untrust'
+          - '&7a player in this farm.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0='
+        slot: 33
+    l:
+      object:
+        name: '&e{player}'
+        lore:
+          - '&7Role: {role}'
+          - ' '
+          - '&bLEFT CLICK'
+          - '&7▲ Promote'
+          - ' '
+          - '&9RIGHT CLICK'
+          - '&7▼ Demote'
+        material: 'PLAYER_HEAD'
+        from: 10
+        to: 27
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 28
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 30
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 35
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 29
+        to: 36

@@ -6,8 +6,10 @@
 # Use #a# in front of the message to display it as a actionbar message.
 #
 # You can get help here:
+# https://discord.gg/B4MAJVk
 
 general:
+  prefix: '&8[&aBetterFarming&8] '
   farm:
     crop: '&aCrop'
     animal: '&9Animal'
@@ -17,45 +19,58 @@ general:
     hours: 'hour(s)'
 
 message:
+  player-offline: '&cThe player&e {player} &cis offline. &7Typo?'
   no-access:
-    no-permission: '&8[&aBetterFarming&8] &cYou don''t have permission to do this. &7You need permission&b {permission}&7.'
-    general: '&8[&aBetterFarming&8] &cYou''re not allowed to do that in this farm. &7It belongs to player&b {owner}&7.'
-    block-break: '&8[&aBetterFarming&8] &cYou''re not allowed to break blocks in this farm. &7It belongs to player&b {owner}&7.'
-    block-place: '&8[&aBetterFarming&8] &cYou''re not allowed to plave blocks in this farm. &7It belongs to player&b {owner}&7.'
-    interact: '&8[&aBetterFarming&8] &cYou''re not allowed to interact in this farm. &7It belongs to player&b {owner}&7.'
+    no-permission: '&cYou don''t have permission to do this. &7You need permission&b {permission}&7.'
+    general: '&cYou''re not allowed to do that in this farm. &7It belongs to player&b {owner}&7.'
+    block_break: '&cYou''re not allowed to break blocks in this farm. &7This farm belongs to player&b {owner}&7. Bypass permission: {bypass}'
+    block_place: '&cYou''re not allowed to place blocks in this farm. &7This belongs to player&b {owner}&7. Bypass permission: {bypass}'
+    interact: '&cYou''re not allowed to interact in this farm. &7It belongs to player&b {owner}&7.'
+    plant: '&cYou''re not allowed to plant seeds in this farm. &7It belongs to player&b {owner}&7. Bypass permission: {bypass}'
+    harvest: '&cYou''re not allowed to harvest plants in this farm. &7It belongs to player&b {owner}&7. Bypass permission: {bypass}'
   farm-created: '#t#&2Created{newline}&a{type} Farm'
   farm-deleted: '#t#&cDeleted{newline}&a{type} Farm'
   creation:
-    spam: '&8[&aBetterFarming&8] &cPlease don''t spam farm creation. &7Farm creation cancelled.'
-    environment: '&8[&aBetterFarming&8] &cYou can''t create farm in water or lava. &7Please look for a better place.'
-    other-farm: '&8[&aBetterFarming&8] &cYou can''t do this here since it overlaps with a other farm. &7Get some distance.'
-    max-farms: '&8[&aBetterFarming&8] &cYou''re not allowed to create any more farms. &7You reached your maximum amount of&b {max} &7farms. Permission: betterfarming.farms.NUMBER'
-    previous-levels: '&8[&aBetterFarming&8] &7The level values, of your recently deleted farm, were applied to this farm.'
+    spam: '&cPlease don''t spam farm creation. &7Farm creation cancelled.'
+    environment: '&cYou can''t create farm in water or lava. &7Please look for a better place.'
+    other-farm: '&cYou can''t do this here since it overlaps with a other farm of player&e {player}&c. &7Get some distance.'
+    max-farms: '&cYou''re not allowed to create any more farms. &7You reached your maximum amount of&b {max} &7farms. Permission: betterfarming.farms.NUMBER'
+    owner: '&cYou can''t create a farm with this farm item. You don''t own it. &7It belongs to&b {owner}&7.'
+    world: '&cYou can''t create farms in world&e {world}&c. &7A administrator needs to add this world to config. Option: general.worlds_list'
+  chat-action:
+    player: '&7Please enter the name of the target player.'
+    role:
+      name: '&7Please enter a name for the new role.'
+      max: '&cYou can''t create more roles for this farm. &7You reached your limit of&b {max} &7roles. Permisssion: betterfarming.roles.NUMBER'
 
 command:
   general:
-    cmd-not-exist: '&8[&aBetterFarming&8] &cThis subcommand doesn''t exist. &7Command&b {command} &7wasn''t found.'
-    cant-afford: '&8[&aBetterFarming&8] &cYou can''t afford this. &7You need&b ${cost} &7money to pay this.'
-    player-offline: '&8[&aBetterFarming&8] &cCouldn''t find this player. &7Player&b {player} &7is offline.'
-    invalid-number: '&8[&aBetterFarming&8] &cYou entered a invalid number at the&e {argument} &cargument. &7Please instert a valid number there.'
+    cmd-not-exist: '&cThis subcommand doesn''t exist. &7Command&b {command} &7wasn''t found.'
+    cant-afford: '&cYou can''t afford this. &7You need&b ${cost} &7money to pay this.'
+    player-offline: '&cCouldn''t find this player. &7Player&b {player} &7is offline.'
+    invalid-number: '&cYou entered a invalid number at the&e {argument} &cargument. &7Please instert a valid number there.'
   get:
-    dropped: '&8[&aBetterFarming&8] &7You received a farm item for&b ${cost}&7. &cIt dropped to the ground, because there was no space left in your inventory.'
-    success: '&8[&aBetterFarming&8] &7You received a farm item for&b ${cost}&7. It''s was put in your inventory.'
+    confirm: '&cPlease confirm this purchase &8(&7/&aFarm get confirm&8)&c. &7Buying this farm item will cost you&c ${costs}&7.'
+    dropped: '&7You received a farm item for&b ${cost}&7. &cIt dropped to the ground, because there was no space left in your inventory.'
+    success: '&7You received a farm item for&b ${cost}&7. It''s now in your inventory.'
   give:
-    success-sender: '&8[&aBetterFarming&8] &7You successful gave&b {items} &7farm item(s) to player&b {player}&7.'
-    success-target: '&8[&aBetterFarming&8] &7You received&b {items} &7farm item(s). They were put in your inventory.'
-    dropped: '&8[&aBetterFarming&8] &7You received&b {items} &7farm items. &cThey dropped to the gound, because there was no space left in your inventory.'
+    success-sender: '&7You successful gave&b {items} &7farm item(s) to player&b {player}&7.'
+    success-target: '&7You received&b {items} &7farm item(s). They were put in your inventory.'
+    dropped: '&7You received&b {items} &7farm items. &cThey dropped to the gound, because there was no space left in your inventory.'
   help:
-    page-not-exist: '&8[&aBetterFarming&8] &cThe page&e {page} &cdoesn''t exist. &7Typo?'
+    page-not-exist: '&cThe page&e {page} &cdoesn''t exist. &7Typo?'
 
 
 help:
   general:
-    prefix: '&8[&aBetterFarming&8] &7Usage: '
-    header: '&7-------<- &aBetterFarming Help &7Page&6 {page} &8/&e {pages} &7->-------'
+    prefix: '&7Usage: '
+    header: '&7-------<- &2BetterFarming Help &7Page&2 {page} &8/&2 {pages} &7->-------'
     page: '&7Use &8/&2Farm help {next} &7for the next page. <> = needed [] = optional'
-    footer: '&7-------<- &aBetterFarming Help &7Page&6 {page} &8/&e {pages} &7->-------'
+    footer: '&7-------<- &2BetterFarming Help &7Page&2 {page} &8/&a2 {pages} &7->-------'
   command:
-    help: '&8/&7Farm help &8[&apage&8] - &eGet help'
-    get: '&8/&7Farm get &8- &eGet farm item'
-    give: '&8/&7Farm give &8<&7player&8> [&7amount&8] - &eGive farm item'
+    help: '&8/&aFarm help &8[&apage&8] - &7Get help'
+    get: '&8/&aFarm get &8- &7Get farm item'
+    give: '&8/&aFarm give &8<&7player&8> [&7amount&8] [&7radius-blocks&8] [&7growth-interval&8] [&7storage-slots&8] - &7Give farm item'
+
+    admin:
+      reload: '&8/&aFarm reload &8- &7Reload configurations'

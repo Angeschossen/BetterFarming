@@ -1,1 +1,1 @@
-# FIXED Chunk load error on startup
+# FIXED Dispenser protection exploit

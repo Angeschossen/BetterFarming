@@ -1,19 +1,58 @@
 main: me.angeschossen.betterfarming.BetterFarming
 name: BetterFarming
-version: 1.5.3
+version: 1.8.3.4
 api-version: 1.13
+load: POSTWORLD
 
 commands:
   betterfarming:
-    aliases: [farm, farms, farming]
+    aliases: [farm, farms, farming, bf]
     description: BetterFarming main command.
 
 permissions:
   betterfarming.*:
-    description: Access to all Betterfarming actions
+    description: Access to all Betterfarming actions.
     default: op
     children:
       betterfarming.farms.<Number>:
         description: Give players permission to create specific amount of farms.
         default: op
-
+      betterfarming.command.*:
+        description: Access to all BetterFarming commands (no admin commands).
+        default: op
+        children:
+          betterfarming.command.get:
+            description: Access to /BetterFarming get command.
+            default: op
+          betterfarming.command.give:
+            description: Access to /BetterFarming give command.
+            default: op
+          betterfarming.command.help:
+            description: Access to /BetterFarming help command.
+            default: op
+      betterfarming.admin.command.*:
+        description: Access to all admin commands.
+        default: op
+        children:
+          betterfarming.admin.command.reload:
+            description: Access to /BetterFarming reload command.
+            default: op
+      betterfarming.bypass.*:
+        description: Bypass all protections.
+        default: op
+        children:
+          betterfarming.bypass.block_break:
+            description: Bypass block break protection.
+            default: op
+          betterfarming.bypass.block_place:
+            description: Bypass block place protection.
+            default: op
+          betterfarming.bypass.harvest:
+            description: Bypass harvest protection.
+            default: op
+          betterfarming.bypass.plant:
+            description: Bypass crop plant protection.
+            default: op
+          betterfarming.bypass.interact:
+            description: Bypass interact block protection.
+            default: op
