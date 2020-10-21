@@ -51,7 +51,6 @@ message:
   player-offline: '&7玩家&B{player}&7不在线'
   player-not-exist: '&7未找到玩家&b{player}'
   no-access:
-    no-permission: '&7你没有权限这么做'
     general: '&7你不能这么做,这个农场方块属于&b{owner}'
     block_break: '&7你不能这么做,这个农场方块属于&b{owner}'
     block_place: '&7你不能这么做,这片农场属于&b{owner}'
@@ -74,6 +73,7 @@ message:
       max: '&7你最多能创建&b{max}&7个身份'
 command:
   general:
+    no-permission: '&7你没有权限这么做'
     cmd-not-exist: '&7该指令不存在'
     cant-afford: '&7你需要&b{cost}&f가&7来购买'
     player-offline: '&7玩家&b{player}&7不在线'

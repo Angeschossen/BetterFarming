@@ -1,9 +1,0 @@
-1.8.7.1
-+ ADDED Option to disable to crop visual update helper
-
-  # With this option you can randomize the visual update of the farm crops.
-  # This helps to improve client and server performance. It does not affect any growth speed or the effeciency of the farm.
-  update-helper: true
-
-# FIXED Live time placeholder in farm item
-    &7Run time:&5 {run-time}
