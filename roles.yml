@@ -1,0 +1,30 @@
+# Wiki: https://github.com/Angeschossen/ChestProtect/wiki/Roles
+roles:
+  owner:
+    name: '&4Owner'
+    flags: 'ALL'
+  admin:
+    name: '&cAdmin'
+    flags:
+      - HARVEST
+      - PLANT
+      - BLOCK_BREAK
+      - BLOCK_PLACE
+      - INTERACT
+      - PLAYER_TRUST
+      - PLAYER_UNTRUST
+      - PLAYER_SETROLE
+      - CONFIGURE
+      - UPGRADE
+  member:
+    name: '&eMember'
+    flags:
+      - HARVEST
+      - PLANT
+      - BLOCK_BREAK
+      - BLOCK_PLACE
+      - INTERACT
+      - UPGRADE
+  visitor:
+    name: '&7Visitor'
+    flags: []

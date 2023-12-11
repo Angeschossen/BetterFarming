@@ -1,0 +1,872 @@
+# Here you can add new farm types or configure existing ones.
+# The options of this file can't be reloaded. A server restart is required.
+# Wiki: https://github.com/Angeschossen/BetterFarming/wiki/Farm-Types
+# Set max amount of farms for a player: https://github.com/Angeschossen/BetterFarming/wiki/Permissions
+types:
+  crop:
+    enabled: true
+    # Available types: NORMAL and TREE
+    type: 'NORMAL'
+    name: '&eCrop Farm'
+    # The default config uses end rods instead of player heads or armor stands. You can adjust it to whatever you prefer.
+    # This also supports custom heads: https://github.com/Angeschossen/PluginFrameworkAPI/wiki/New-Head-Textures
+    item: 'END_ROD'
+    # Use 'AIR' to disable farmland creation.
+    farmland: 'FARMLAND'
+    cost: 5000.0
+
+    growth:
+      # Update the blocks state to its current growth stage.
+      visualization:
+        enabled: true
+        # Should crop growth be visualized instantly?
+        # If disabled, the age of a crop will be updated periodically instead of each cycle.
+        # Keeping this disabled, will further increase performance.
+        instant: false
+      # Should each crop have multiple growth stages, just like normal crops do?
+      # So the time until harvest would be interval * growth stages.
+      stages: true
+
+    # Require the owner of the farm to be online?
+    require-owner-online: false
+    # Use an empty list to disable the recipe.
+    recipe: [ ]
+    # Prevent placement of this farm type in specific worlds.
+    world-blacklist: [ ]
+
+    # Place a small armor stand instead of the actual farm item.
+    armor-stand:
+      enabled: false
+      helmet: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjgwNzI3ZDM5MGMzYjM0ZDgwOWE0ZDU5MDhjNThiNWVkNmE4OTFiOGJkZDBiY2ExNjA2NWNkNTVmMGQ4ZGUwYyJ9fX0='
+      chestplate: 'LEATHER_CHESTPLATE'
+      leggings: 'LEATHER_LEGGINGS'
+      boots: 'LEATHER_BOOTS'
+      tool: 'IRON_HOE'
+
+    # Require farms to be charged with specific items to add more fuel to them.
+    # Once a farm is out of fuel, it will pause.
+    fuel:
+      enabled: true
+      # Initial fuel time.
+      initial: 6h
+      # Maximum fuel time.
+      max: 7d
+      # Let your players charge their farm with items.
+      # Apply model data: https://github.com/Angeschossen/General/wiki/GUI-Menus#set-custom-model-data
+      # The seconds option defines how many seconds each fuel item equals.
+      items:
+        iron_hoe:
+          name: ''
+          material: 'IRON_HOE'
+          data:
+            seconds: 900
+        bone_meal:
+          name: ''
+          material: 'BONE_MEAL'
+          data:
+            seconds: 25
+        bone_block:
+          name: ''
+          material: 'BONE_BLOCK'
+          data:
+            seconds: 225
+        bread:
+          name: ''
+          material: 'BREAD'
+          data:
+            seconds: 50
+
+    levels:
+      # Growth Interval (in seconds)
+      # How long should it take until a crop reaches its next stage?
+      interval:
+        1:
+          value: 120
+          cost: 0
+        2:
+          value: 80
+          cost: 5000.0
+        3:
+          value: 60
+          cost: 7500.0
+        4:
+          value: 30
+          cost: 10000.0
+        5:
+          value: 5
+          cost: 15000.0
+
+      # Radius
+      # Here you can set the farm radius. Please note that it's not wise to allow a very high radius.
+      # Instead, it's recommended to let users create more farms instead of very big ones.
+      radius:
+        1:
+          value: 1
+          cost: 0
+        2:
+          value: 2
+          cost: 1000.0
+        3:
+          value: 3
+          cost: 2500.0
+        4:
+          value: 5
+          cost: 4000.0
+        5:
+          value: 6
+          cost: 5500.0
+
+      # Storage Slots
+      # Here you can set te farm storage slots. The slots can be an infinitive high number.
+      storage:
+        1:
+          value: 9
+          cost: 0
+        2:
+          value: 18
+          cost: 100.0
+        3:
+          value: 27
+          cost: 500.0
+        4:
+          value: 36
+          cost: 1000.0
+        5:
+          value: 45
+          cost: 5000.0
+        6:
+          value: 54
+          cost: 7500.0
+        7:
+          value: 81
+          cost: 9000.0
+        8:
+          value: 108
+          cost: 12000.0
+
+    # Here you can configure the items that result out of the harvest.
+    # "min" and "max" will randomize the amount of the items.
+    # You can set a few optional parameters, such as model-data and enchantments: https://github.com/Angeschossen/BetterFarming/wiki/Farm-Types#model-data-enchantments
+    blocks:
+      wheat:
+        harvest:
+          wheat:
+            name: ''
+            material: 'WHEAT'
+            data:
+              min: 1
+              max: 1
+              chance: 100
+      carrots:
+        item:
+          name: ''
+          material: 'CARROT'
+        harvest:
+          carrot:
+            name: ''
+            material: 'CARROT'
+            data:
+              min: 1
+              max: 1
+              chance: 100
+      potatoes:
+        item:
+          name: ''
+          material: 'POTATO'
+        harvest:
+          potato:
+            name: ''
+            material: 'POTATO'
+            data:
+              min: 1
+              max: 1
+              chance: 100
+      beetroots:
+        item:
+          name: ''
+          material: 'BEETROOT'
+        harvest:
+          beetroot:
+            name: ''
+            material: 'BEETROOT'
+            data:
+              min: 1
+              max: 1
+              chance: 100
+      melon_stem:
+        item:
+          name: ''
+          material: 'MELON_SEEDS'
+        harvest:
+          melon_slice:
+            name: ''
+            material: 'MELON_SLICE'
+            data:
+              min: 3
+              max: 7
+              chance: 100
+      pumpkin_stem:
+        item:
+          name: ''
+          material: 'PUMPKIN_SEEDS'
+        harvest:
+          pumpkin:
+            name: ''
+            material: 'PUMPKIN'
+            data:
+              min: 1
+              max: 3
+              chance: 100
+      sweet_berry_bush:
+        item:
+          name: ''
+          material: 'SWEET_BERRIES'
+        harvest:
+          sweet_berries:
+            name: ''
+            material: 'SWEET_BERRIES'
+            data:
+              min: 1
+              max: 7
+              chance: 100
+      nether_wart:
+        item:
+          name: ''
+          material: 'NETHER_WART'
+        harvest:
+          nether_wart:
+            name: ''
+            material: 'NETHER_WART'
+            data:
+              min: 1
+              max: 1
+      sugar_cane:
+        item:
+          name: ''
+          material: 'SUGAR_CANE'
+        harvest:
+          sugar_cane:
+            name: ''
+            material: 'SUGAR_CANE'
+            data:
+              min: 1
+              max: 1
+      cactus:
+        item:
+          name: ''
+          material: 'CACTUS'
+        harvest:
+          cactus:
+            name: ''
+            material: 'CACTUS'
+            data:
+              min: 1
+              max: 1
+
+  tree:
+    enabled: true
+    type: 'TREE'
+    name: '&2Tree Farm'
+    # The default config uses end rods instead of player heads or armor stands. You can adjust it to whatever you prefer.
+    # This also supports custom heads: https://github.com/Angeschossen/PluginFrameworkAPI/wiki/New-Head-Textures
+    item: 'END_ROD'
+    farmland: 'DIRT'
+    cost: 5000.0
+    # Should each sapling have multiple growth stages, just like normal saplings do?
+    # So the time until harvest would be interval * growth stages.
+    growth-stages: true
+    require-owner-online: false
+    recipe: [ ]
+    world-blacklist: [ ]
+
+    growth:
+      # Enabling this will make the tree visually grow.
+      visualization:
+        enabled: false
+      # Set to false, since most saplings don't have any growth stages.
+      stages: false
+
+    armor-stand:
+      enabled: false
+      helmet: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTAwN2M0YTNlM2I4ZDMxYjk0YTk1MTczYmMyYWVhNGI3MThjMTUwZjAxNjZmMGM5NjRjYTllMDRiZTY2NGEyMiJ9fX0='
+      chestplate: 'LEATHER_CHESTPLATE'
+      leggings: 'LEATHER_LEGGINGS'
+      boots: 'LEATHER_BOOTS'
+      tool: 'IRON_AXE'
+
+    fuel:
+      enabled: true
+      # Initial fuel time.
+      initial: 6h
+      # Maximum fuel time.
+      max: 7d
+      # Let your players charge their farm with items.
+      # Apply model data: https://github.com/Angeschossen/General/wiki/GUI-Menus#set-custom-model-data
+      # The seconds option defines how many seconds each fuel item equals.
+      items:
+        shears:
+          name: ''
+          material: 'SHEARS'
+          data:
+            seconds: 900
+        bone_meal:
+          name: ''
+          material: 'BONE_MEAL'
+          data:
+            seconds: 25
+        bone_block:
+          name: ''
+          material: 'BONE_BLOCK'
+          data:
+            seconds: 225
+        bread:
+          name: ''
+          material: 'BREAD'
+          data:
+            seconds: 50
+
+    levels:
+      # Growth Interval (in seconds)
+      # How long should it take until a crop reaches it's next stage?
+      interval:
+        1:
+          value: 1050
+          cost: 0
+        2:
+          value: 800
+          cost: 5000.0
+        3:
+          value: 550
+          cost: 7500.0
+        4:
+          value: 450
+          cost: 10000.0
+        5:
+          value: 380
+          cost: 15000.0
+
+      # Radius
+      # Here you can set the farm radius. Please not that it's not wise to allow a very high radius.
+      # Instead, it's recommended to let users create more farms instead of very big ones.
+      radius:
+        1:
+          value: 1
+          cost: 0
+        2:
+          value: 2
+          cost: 1000.0
+        3:
+          value: 3
+          cost: 2500.0
+        4:
+          value: 5
+          cost: 4000.0
+        5:
+          value: 6
+          cost: 5500.0
+
+      # Storage Slots
+      # Here you can set te farm storage slots. The slots can be a infinitive high number.
+      storage:
+        1:
+          value: 9
+          cost: 0
+        2:
+          value: 18
+          cost: 100.0
+        3:
+          value: 27
+          cost: 500.0
+        4:
+          value: 36
+          cost: 1000.0
+        5:
+          value: 45
+          cost: 5000.0
+        6:
+          value: 54
+          cost: 7500.0
+        7:
+          value: 81
+          cost: 9000.0
+        8:
+          value: 108
+          cost: 12000.0
+
+    blocks:
+      acacia_sapling:
+        item:
+          name: ''
+          material: 'ACACIA_SAPLING'
+        harvest:
+          acacia_log:
+            name: ''
+            material: 'ACACIA_LOG'
+            data:
+              min: 5
+              max: 10
+          acacia_leaves:
+            enabled: false
+            name: ''
+            material: 'ACACIA_LEAVES'
+            data:
+              min: 2
+              max: 8
+      birch_sapling:
+        item:
+          name: ''
+          material: 'BIRCH_SAPLING'
+        harvest:
+          birch_log:
+            name: ''
+            material: 'BIRCH_LOG'
+            data:
+              min: 5
+              max: 10
+          birch_leaves:
+            enabled: false
+            name: ''
+            material: 'BIRCH_LEAVES'
+            data:
+              min: 2
+              max: 8
+      dark_oak_sapling:
+        item:
+          name: ''
+          material: 'DARK_OAK_SAPLING'
+        harvest:
+          dark_oak_log:
+            name: ''
+            material: 'DARK_OAK_LOG'
+            data:
+              min: 5
+              max: 10
+          dark_oak_leaves:
+            enabled: false
+            name: ''
+            material: 'DARK_OAK_LEAVES'
+            data:
+              min: 2
+              max: 8
+      jungle_sapling:
+        item:
+          name: ''
+          material: 'JUNGLE_SAPLING'
+        harvest:
+          jungle_log:
+            name: ''
+            material: 'JUNGLE_LOG'
+            data:
+              min: 5
+              max: 10
+          jungle_leaves:
+            enabled: false
+            name: ''
+            material: 'JUNGLE_LEAVES'
+            data:
+              min: 2
+              max: 8
+      oak_sapling:
+        item:
+          name: ''
+          material: 'OAK_SAPLING'
+        harvest:
+          oak_log:
+            name: ''
+            material: 'OAK_LOG'
+            data:
+              min: 5
+              max: 10
+          oak_leaves:
+            enabled: false
+            name: ''
+            material: 'OAK_LEAVES'
+            data:
+              min: 2
+              max: 8
+          apple:
+            name: ''
+            material: 'APPLE'
+            data:
+              min: 0
+              max: 2
+      spruce_sapling:
+        item:
+          name: ''
+          material: 'SPRUCE_SAPLING'
+        harvest:
+          spruce_log:
+            name: ''
+            material: 'SPRUCE_LOG'
+            data:
+              min: 5
+              max: 10
+          spruce_leaves:
+            enabled: false
+            name: ''
+            material: 'SPRUCE_LEAVES'
+            data:
+              min: 2
+              max: 8
+      mangrove_propagule:
+        item:
+          name: ''
+          material: 'MANGROVE_PROPAGULE'
+        harvest:
+          mangrove_log:
+            name: ''
+            material: 'MANGROVE_LOG'
+            data:
+              min: 5
+              max: 10
+          mangrove_roots:
+            enabled: false
+            name: ''
+            material: 'MANGROVE_ROOTS'
+            data:
+              min: 2
+              max: 8
+          mangrove_leaves:
+            enabled: false
+            name: ''
+            material: 'MANGROVE_LEAVES'
+            data:
+              min: 2
+              max: 8
+          moss_carpet:
+            enabled: false
+            name: ''
+            material: 'MOSS_CARPET'
+            data:
+              min: 2
+              max: 4
+          vine:
+            enabled: false
+            name: ''
+            material: 'VINE'
+            data:
+              min: 0
+              max: 2
+
+
+  ore:
+    enabled: false
+    type: 'NORMAL'
+    name: '&7Ore Farm'
+    # The default config uses end rods instead of player heads or armor stands. You can adjust it to whatever you prefer.
+    # This also supports custom heads: https://github.com/Angeschossen/PluginFrameworkAPI/wiki/New-Head-Textures
+    item: 'END_ROD'
+    farmland: 'AIR'
+    cost: 5000.0
+    require-owner-online: false
+    recipe: [ ]
+    world-blacklist: [ ]
+
+    growth:
+      # Set to false, because ores can't have any "growth" stages.
+      visualization:
+        enabled: false
+      # Set to false, because ores can't have multiple "growth" stages.
+      stages: false
+
+    armor-stand:
+      enabled: false
+      helmet: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzNlOWI3ZjQ1MDc1YjMyZDM3YjQ1NWVkNzI3NzkzZWI0MjUyMDY1NGI4M2JiN2FlZGM2NmEyMDYzZTU4ZTdiIn19fQ=='
+      chestplate: 'LEATHER_CHESTPLATE'
+      leggings: 'LEATHER_LEGGINGS'
+      boots: 'LEATHER_BOOTS'
+      tool: 'IRON_PICKAXE'
+
+    fuel:
+      enabled: true
+      # Initial time.
+      initial: 6h
+      # Maximum fuel time.
+      max: 7d
+      # Let your players charge their farm with items.
+      # Apply model data: https://github.com/Angeschossen/General/wiki/GUI-Menus#set-custom-model-data
+      # The seconds option defines how many seconds each fuel item equals.
+      items:
+        iron_pickaxe:
+          name: ''
+          material: 'IRON_PICKAXE'
+          data:
+            seconds: 900
+        cooked_beef:
+          name: ''
+          material: 'COOKED_BEEF'
+          data:
+            seconds: 240
+        torch:
+          name: ''
+          material: 'TORCH'
+          data:
+            seconds: 25
+
+    levels:
+      # Growth Interval (in seconds)
+      # How long should it take until a crop reaches it's next stage?
+      interval:
+        1:
+          value: 1050
+          cost: 0
+        2:
+          value: 800
+          cost: 5000.0
+        3:
+          value: 550
+          cost: 7500.0
+        4:
+          value: 450
+          cost: 10000.0
+        5:
+          value: 380
+          cost: 15000.0
+
+      # Radius
+      # Here you can set the farm radius. Please not that it's not wise to allow a very high radius.
+      # Instead it's recommended to let users create more farms instead of very big ones.
+      radius:
+        1:
+          value: 1
+          cost: 0
+        2:
+          value: 2
+          cost: 1000.0
+        3:
+          value: 3
+          cost: 2500.0
+        4:
+          value: 5
+          cost: 4000.0
+        5:
+          value: 6
+          cost: 5500.0
+
+      # Storage Slots
+      # Here you can set te farm storage slots. The slots can be a infinitive high number.
+      storage:
+        1:
+          value: 9
+          cost: 0
+        2:
+          value: 18
+          cost: 100.0
+        3:
+          value: 27
+          cost: 500.0
+        4:
+          value: 36
+          cost: 1000.0
+        5:
+          value: 45
+          cost: 5000.0
+        6:
+          value: 54
+          cost: 7500.0
+        7:
+          value: 81
+          cost: 9000.0
+        8:
+          value: 108
+          cost: 12000.0
+
+    blocks:
+      coal_ore:
+        item:
+          name: ''
+          material: 'COAL_ORE'
+        harvest:
+          coal:
+            name: ''
+            material: 'COAL'
+            data:
+              min: 1
+              max: 1
+      deepslate_coal_ore:
+        item:
+          name: ''
+          material: 'DEEPSLATE_COAL_ORE'
+        harvest:
+          coal:
+            name: ''
+            material: 'COAL'
+            data:
+              min: 1
+              max: 1
+      iron_ore:
+        item:
+          name: ''
+          material: 'IRON_ORE'
+        harvest:
+          raw_iron:
+            name: ''
+            material: 'RAW_IRON'
+            data:
+              min: 1
+              max: 1
+      deepslate_iron_ore:
+        item:
+          name: ''
+          material: 'DEEPSLATE_IRON_ORE'
+        harvest:
+          raw_iron:
+            name: ''
+            material: 'RAW_IRON'
+            data:
+              min: 1
+              max: 3
+      copper_ore:
+        item:
+          name: ''
+          material: 'COPPER_ORE'
+        harvest:
+          raw_copper:
+            name: ''
+            material: 'RAW_COPPER'
+            data:
+              min: 2
+              max: 3
+      deepslate_copper_ore:
+        item:
+          name: ''
+          material: 'DEEPSLATE_COPPER_ORE'
+        harvest:
+          raw_copper:
+            name: ''
+            material: 'RAW_COPPER'
+            data:
+              min: 2
+              max: 3
+      gold_ore:
+        item:
+          name: ''
+          material: 'GOLD_ORE'
+        harvest:
+          raw_gold:
+            name: ''
+            material: 'RAW_GOLD'
+            data:
+              min: 1
+              max: 1
+      nether_gold_ore:
+        item:
+          name: ''
+          material: 'NETHER_GOLD_ORE'
+        harvest:
+          gold_nugget:
+            name: ''
+            material: 'GOLD_NUGGET'
+            data:
+              min: 2
+              max: 6
+      deepslate_gold_ore:
+        item:
+          name: ''
+          material: 'DEEPSLATE_GOLD_ORE'
+        harvest:
+          raw_gold:
+            name: ''
+            material: 'RAW_GOLD'
+            data:
+              min: 1
+              max: 1
+      diamond_ore:
+        item:
+          name: ''
+          material: 'DIAMOND_ORE'
+        harvest:
+          diamond:
+            name: ''
+            material: 'DIAMOND'
+            data:
+              min: 1
+              max: 1
+      deepslate_diamond_ore:
+        item:
+          name: ''
+          material: 'DEEPSLATE_DIAMOND_ORE'
+        harvest:
+          diamond:
+            name: ''
+            material: 'DIAMOND'
+            data:
+              min: 1
+              max: 1
+      emerald_ore:
+        item:
+          name: ''
+          material: 'EMERALD_ORE'
+        harvest:
+          emerald:
+            name: ''
+            material: 'EMERALD'
+            data:
+              min: 1
+              max: 1
+      deepslate_emerald_ore:
+        item:
+          name: ''
+          material: 'DEEPSLATE_EMERALD_ORE'
+        harvest:
+          emerald:
+            name: ''
+            material: 'EMERALD'
+            data:
+              min: 1
+              max: 1
+      nether_quartz_ore:
+        item:
+          name: ''
+          material: 'NETHER_QUARTZ_ORE'
+        harvest:
+          quartz:
+            name: ''
+            material: 'QUARTZ'
+            data:
+              min: 1
+              max: 1
+      lapis_ore:
+        item:
+          name: ''
+          material: 'LAPIS_ORE'
+        harvest:
+          lapis_lazuli:
+            name: ''
+            material: 'LAPIS_LAZULI'
+            data:
+              min: 4
+              max: 9
+      deepslate_lapis_ore:
+        item:
+          name: ''
+          material: 'DEEPSLATE_LAPIS_ORE'
+        harvest:
+          lapis_lazuli:
+            name: ''
+            material: 'LAPIS_LAZULI'
+            data:
+              min: 4
+              max: 9
+      redstone_ore:
+        item:
+          name: ''
+          material: 'REDSTONE_ORE'
+        harvest:
+          redstone:
+            name: ''
+            material: 'REDSTONE'
+            data:
+              min: 4
+              max: 5
+      deepslate_redstone_ore:
+        item:
+          name: ''
+          material: 'DEEPSLATE_REDSTONE_ORE'
+        harvest:
+          redstone:
+            name: ''
+            material: 'REDSTONE'
+            data:
+              min: 4
+              max: 5

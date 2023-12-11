@@ -1,0 +1,1 @@
+- Fixed: [#2428] tree farm sapling types

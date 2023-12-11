@@ -1,0 +1,163 @@
+# General
+general:
+  # Default: English (en-US) - no download required.
+  # This defines the default language. You can place multiple locales in the plugin's "Language" folder to display different locales depending on the player's locale.
+  # You can access translations maintained by the community in our Discord: https://discord.gg/B4MAJVk
+  # To access translations, other than en-US, execute /translations in the Discord server.
+  language: 'en-US'
+  # Worlds were players can create farms.
+  # NOTE: This setting requires server reload / restart.
+  # World names are CASE-SENSITIVE
+  worlds_list:
+    - world
+
+  # Set the format of all economy related displays.
+  # Info: https://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html
+  # NOTE: This setting requires server reload / restart.
+  eco-format:
+    normal: '$#,##0.00'
+    # The short format will use the normal format if the value is lower than 1000.
+    # If the value is higher or equal than 1000, it will return {value} divided by 1000.
+    # This format is only used by a small amount of messages.
+    short: '${value}k'
+
+  # If enabled, limit permissions will be combined instead of just taking the highest value.
+  # Example: A player has the permission betterfarming.crop.5 and betterfarming.crop.2.
+  #          If enabled: This will result in a limit of 7 crop farms.
+  #          If disabled: This will result in a limit of 5 crop farms.
+  permission-stacking: false
+
+
+# Database
+database:
+  # MySQL
+  mysql:
+    # Enable this to use MySQL instead of "file based"
+    # SQLite. For performance improvement it's recommended to
+    # use MySQL. If you don't have access to a MySQL server,
+    # just let this disabled (false).
+    enabled: false
+    ip-address: 'localhost'
+    port: '3306'
+    database: 'betterfarming'
+    # It is highly recommended setting a unique table prefix if the plugin shares a database with other plugins.
+    table-prefix: 'betterfarming'
+    user: 'minecraft'
+    password: 'password'
+
+
+integration:
+  # Lands (https://www.spigotmc.org/resources/53313)
+  lands:
+    # Should players be allowed to place hoppers only in claimed areas?
+    # This disallows placing upgradeable hoppers in wilderness.
+    only-land: false
+
+  # Economy settings
+  # If all types are disabled, the item based economy will be used instead.
+  economy:
+    vault:
+      # You need an economy plugin, which supports Vault, to let this work.
+      enabled_2: true
+      # Server bank account name. Player expenses will go here.
+      server-bank: ''
+    levels:
+      enabled_4: false
+    # Item currency is used when all other economy options are disabled or unavailable.
+    # The currency item can be edited in the GUI language file at the "currency" item.
+    items:
+      # If enabled, only items that have the same name, lore etc. will belong to the currency.
+      # Not just items of the same type or items with the same model-data.
+      strict: false
+
+command:
+  # Should players need to confirm their purchase at /farm get?
+  get-confirm: false
+  # Set aliases
+  # for /BetterFarming command
+  # NOTE: This setting requires /reload
+  alias:
+    betterfarming_list:
+      - farms
+      - farm
+
+farm:
+  # Should players be able to put an upgradeable hopper underneath the farm item to extract items out of the farm storage?
+  # Supported plugins: UpgradeableHoppers (https://www.spigotmc.org/resources/69201/)
+  # NOTE: This setting requires server reload / restart.
+  hopper:
+    enabled_5: true
+  # Creation
+  creation:
+    # Should only the owner
+    # registered on the farm
+    # item, be able to place the farm?
+    only-owner: true
+    # If enabled, BetterFarming
+    # will set farmland around the farm.
+    farm-land:
+      # Only allow the replacement of the following blocks.
+      filter:
+        enabled_3: true
+        # Set the filter list.
+        # The farm will only replace these blocks with farm land.
+        blocks_list:
+          - 'AIR'
+          - 'GRASS_BLOCK'
+          - 'DIRT'
+
+  # Protection
+  protection:
+    # Y-plus means the y value
+    # (height where the farm is) plus this value.
+    # This creates a protection box for the farm.
+    y-plus: 4
+    # Some for minus, just
+    # that it goes for example 4 blocks
+    # down, instead of up.
+    y-minus: 4
+    # Should farm be protected against explosions?
+    # NOTE: If turned off, farms can be destroyed and stolen completely!
+    anti-explosive: true
+    # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2, BentoBox, PlotSquared, WorldGuard
+    # Allow players, which are trusted in the region where the
+    # farm is located in, to break blocks, place blocks and
+    # interact, if they're allowed to do so in the region?
+    allow-region-members: true
+
+  # With this option you can randomise the visual update of the farm crops.
+  # This helps to improve client and server performance. It does not affect any growth speed or the efficiency of the farm.
+  # NOTE: This is in general not needed, but may be helpful with weaker hardware or if you have any server problems.
+  upd-helper: false
+
+  # Should only players with the betterfarming.upgrade permission be able to upgrade any farm?
+  upgrade-perm: false
+  # Spawn fireworks at level upgrade?
+  firework: true
+
+
+# Hologram settings
+# Use holograms to display the farm fuel/livetime status.
+# NOTE: This requires the plugin HolographicDisplays, CMI or DecentHolograms to be installed.
+hologram:
+  enabled_11: true
+  # Y offset - adjust the height
+  offset: 0
+
+# General Teleportation Settings
+# Command specific teleportation options can be find in their sections.
+teleport:
+  # General teleportation cost. Some features might have specific options, which override this.
+  costs: 0
+  # Set the cost of any teleportation to 0 for players that joined the server for the first time.
+  # You can define a time span here. Example: 1d = players that joined the server 23 hours ago, won't pay for any teleportation.
+  first-join_time: 0h
+  # Waittime
+  # Timeunit: seconds
+  wait: 3
+
+
+# Configure logging
+logging:
+  # We might ask you to enable this, when you submit a bugreport.
+  debug: false
