@@ -1,1 +1,1 @@
-- Fixed: [#2428] tree farm sapling types
+- Fixed: [#2445] unhandled tree types
