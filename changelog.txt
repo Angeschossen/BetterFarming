@@ -1,1 +1,1 @@
-- Fixed: [#2445] unhandled tree types
+- Fixed [#2445] Decentholograms support

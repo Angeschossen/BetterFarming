@@ -152,7 +152,7 @@ teleport:
   # Set the cost of any teleportation to 0 for players that joined the server for the first time.
   # You can define a time span here. Example: 1d = players that joined the server 23 hours ago, won't pay for any teleportation.
   first-join_time: 0h
-  # Waittime
+  # Time to wait until the teleportation starts.
   # Timeunit: seconds
   wait: 3
 
@@ -161,3 +161,8 @@ teleport:
 logging:
   # We might ask you to enable this, when you submit a bugreport.
   debug: false
+
+dev:
+  # Disable fetching player skins from Mojang for heads in menus and head blocks.
+  # NOTE: This setting requires server reload / restart.
+  disable-skins: false
