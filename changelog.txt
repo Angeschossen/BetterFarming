@@ -1,1 +1,1 @@
-- Fixed [#2445] Decentholograms support
++ Added: Farm owners can now toggle in the players menu if land members should be added to the farm automatically

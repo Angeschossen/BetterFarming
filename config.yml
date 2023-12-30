@@ -120,9 +120,8 @@ farm:
     # NOTE: If turned off, farms can be destroyed and stolen completely!
     anti-explosive: true
     # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2, BentoBox, PlotSquared, WorldGuard
-    # Allow players, which are trusted in the region where the
-    # farm is located in, to break blocks, place blocks and
-    # interact, if they're allowed to do so in the region?
+    # Allow players, which are trusted in the region where the farm is located in, to break blocks, place blocks and interact, if they're allowed to do so in the region?
+    # This is a default option. Players can change it later in the menu.
     allow-region-members: true
 
   # With this option you can randomise the visual update of the farm crops.
