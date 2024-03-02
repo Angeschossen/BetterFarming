@@ -1,1 +1,3 @@
-+ Added: Farm owners can now toggle in the players menu if land members should be added to the farm automatically
++ Added: [Suggestion] Being able to disallow teleportation to farms: https://github.com/Angeschossen/BetterFarming/wiki/Permissions#teleportation
+
++ Improved: UpgradeableHoppers integration taking items out of storage
