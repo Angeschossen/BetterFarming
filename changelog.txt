@@ -1,3 +1,1 @@
-+ Added: [Suggestion] Being able to disallow teleportation to farms: https://github.com/Angeschossen/BetterFarming/wiki/Permissions#teleportation
-
-+ Improved: UpgradeableHoppers integration taking items out of storage
+- Fixed: Missing chunk unloaded status item
