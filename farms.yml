@@ -58,21 +58,27 @@ types:
         iron_hoe:
           name: ''
           material: 'IRON_HOE'
+          # If enabled: Compares name and lore as well. So only items with the same name and lore will be accepted as fuel.
+          # Custom model data and item type is always compared.
+          strict: false
           data:
             seconds: 900
         bone_meal:
           name: ''
           material: 'BONE_MEAL'
+          strict: false
           data:
             seconds: 25
         bone_block:
           name: ''
           material: 'BONE_BLOCK'
+          strict: false
           data:
             seconds: 225
         bread:
           name: ''
           material: 'BREAD'
+          strict: false
           data:
             seconds: 50
 
@@ -307,21 +313,25 @@ types:
         shears:
           name: ''
           material: 'SHEARS'
+          strict: false
           data:
             seconds: 900
         bone_meal:
           name: ''
           material: 'BONE_MEAL'
+          strict: false
           data:
             seconds: 25
         bone_block:
           name: ''
           material: 'BONE_BLOCK'
+          strict: false
           data:
             seconds: 225
         bread:
           name: ''
           material: 'BREAD'
+          strict: false
           data:
             seconds: 50
 
@@ -590,16 +600,19 @@ types:
         iron_pickaxe:
           name: ''
           material: 'IRON_PICKAXE'
+          strict: false
           data:
             seconds: 900
         cooked_beef:
           name: ''
           material: 'COOKED_BEEF'
+          strict: false
           data:
             seconds: 240
         torch:
           name: ''
           material: 'TORCH'
+          strict: false
           data:
             seconds: 25
 
