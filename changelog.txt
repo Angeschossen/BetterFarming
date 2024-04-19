@@ -1,4 +1,1 @@
-+ Added: New option for fuel items in farms.yml:
-          # If enabled: Compares name and lore as well. So only items with the same name and lore will be accepted as fuel.
-          # Custom model data and item type is always compared.
-          strict: false
++ Added: Eco exp, level type in config.yml

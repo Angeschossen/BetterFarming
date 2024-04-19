@@ -55,20 +55,28 @@ integration:
 
   # Economy settings
   # If all types are disabled, the item based economy will be used instead.
+  # NOTE: When changing these option you might also want to adjust the "eco-format" in this config.
   economy:
     vault:
       # You need an economy plugin, which supports Vault, to let this work.
-      enabled_2: true
-      # Server bank account name. Player expenses will go here.
+      enabled_10: true
+      # Server bank account name. Upkeep will go here. Empty means, that this feature is disabled.
       server-bank: ''
-    levels:
-      enabled_4: false
+    # Player experience
+    exp:
+      enabled_15: false
+    # Player levels
+    # Not recommended, since each player level has their own amount of experience.
+    # It's recommended to use exp instead.
+    level:
+      enabled_16: false
     # Item currency is used when all other economy options are disabled or unavailable.
     # The currency item can be edited in the GUI language file at the "currency" item.
     items:
       # If enabled, only items that have the same name, lore etc. will belong to the currency.
       # Not just items of the same type or items with the same model-data.
       strict: false
+
 
 command:
   # Should players need to confirm their purchase at /farm get?
