@@ -1,1 +1,1 @@
-+ Added: Eco exp, level type in config.yml
++ Added: Display item lore for fuel items

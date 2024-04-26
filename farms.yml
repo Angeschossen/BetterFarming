@@ -57,6 +57,7 @@ types:
       items:
         iron_hoe:
           name: ''
+          lore: "&7This item adds &5{time}[newline]&7worth of fuel to the farm."
           material: 'IRON_HOE'
           # If enabled: Compares name and lore as well. So only items with the same name and lore will be accepted as fuel.
           # Custom model data and item type is always compared.
@@ -65,18 +66,21 @@ types:
             seconds: 900
         bone_meal:
           name: ''
+          lore: "&7This item adds &5{time}[newline]&7worth of fuel to the farm."
           material: 'BONE_MEAL'
           strict: false
           data:
             seconds: 25
         bone_block:
           name: ''
+          lore: "&7This item adds &5{time}[newline]&7worth of fuel to the farm."
           material: 'BONE_BLOCK'
           strict: false
           data:
             seconds: 225
         bread:
           name: ''
+          lore: "&7This item adds &5{time}[newline]&7worth of fuel to the farm."
           material: 'BREAD'
           strict: false
           data:
@@ -312,24 +316,28 @@ types:
       items:
         shears:
           name: ''
+          lore: "&7This item adds &5{time}[newline]&7worth of fuel to the farm."
           material: 'SHEARS'
           strict: false
           data:
             seconds: 900
         bone_meal:
           name: ''
+          lore: "&7This item adds &5{time}[newline]&7worth of fuel to the farm."
           material: 'BONE_MEAL'
           strict: false
           data:
             seconds: 25
         bone_block:
           name: ''
+          lore: "&7This item adds &5{time}[newline]&7worth of fuel to the farm."
           material: 'BONE_BLOCK'
           strict: false
           data:
             seconds: 225
         bread:
           name: ''
+          lore: "&7This item adds &5{time}[newline]&7worth of fuel to the farm."
           material: 'BREAD'
           strict: false
           data:
