@@ -1,1 +1,1 @@
-- Fixed: Spruce sapling being replaced by oak sapling
+- Fixed: Do not re-open menu of deleted farm
