@@ -37,7 +37,7 @@ types:
     # Place a small armor stand instead of the actual farm item.
     armor-stand:
       enabled: false
-      helmet: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjgwNzI3ZDM5MGMzYjM0ZDgwOWE0ZDU5MDhjNThiNWVkNmE4OTFiOGJkZDBiY2ExNjA2NWNkNTVmMGQ4ZGUwYyJ9fX0='
+      helmet: 'skin:925a32560831c295b00527926255e608a039776f3523b92edf788149aae67d6a'
       chestplate: 'LEATHER_CHESTPLATE'
       leggings: 'LEATHER_LEGGINGS'
       boots: 'LEATHER_BOOTS'
@@ -298,7 +298,7 @@ types:
 
     armor-stand:
       enabled: false
-      helmet: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTAwN2M0YTNlM2I4ZDMxYjk0YTk1MTczYmMyYWVhNGI3MThjMTUwZjAxNjZmMGM5NjRjYTllMDRiZTY2NGEyMiJ9fX0='
+      helmet: 'skin:63c143640079253eff861872b6c5580c755eda6bdc3ff74a9846d0ce790c7b2e'
       chestplate: 'LEATHER_CHESTPLATE'
       leggings: 'LEATHER_LEGGINGS'
       boots: 'LEATHER_BOOTS'
@@ -589,7 +589,7 @@ types:
 
     armor-stand:
       enabled: false
-      helmet: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzNlOWI3ZjQ1MDc1YjMyZDM3YjQ1NWVkNzI3NzkzZWI0MjUyMDY1NGI4M2JiN2FlZGM2NmEyMDYzZTU4ZTdiIn19fQ=='
+      helmet: 'skin:1a1b5389717a61a0e9421c97988405d5a336a5ac1ee8e0f2f35678d1d61f4550'
       chestplate: 'LEATHER_CHESTPLATE'
       leggings: 'LEATHER_LEGGINGS'
       boots: 'LEATHER_BOOTS'
