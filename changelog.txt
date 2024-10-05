@@ -1,3 +1,2 @@
-- Fixed: default armor stand head skins
-- Fixed: harvested items weren't able to be sold in 3rd party shop plugins
-- Fixed: item eco item
+- Fixed: failure_cost item
+- Fixed: Fireworks shouldn't do damage
